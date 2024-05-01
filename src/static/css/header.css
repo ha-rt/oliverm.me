@@ -1,0 +1,36 @@
+header {
+    display: flex;
+}
+
+.header-text {
+    text-align: center;
+    font-size: 85px;
+    padding-bottom: -15;
+    height: 82px;
+}
+
+.favicon {
+    overflow: hidden;
+
+    
+    width: 128px;
+    height: 128px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links .nav-li {
+    display: inline-block;
+
+    margin-left: 15px;
+}
+
+.nav-links .nav-li:nth-child(1) {
+    margin-left: 6px;
+}
+
+.nav-links .nav-li .nav-li-link {
+    color: #ffffff;
+}
