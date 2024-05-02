@@ -37,3 +37,8 @@ hr {
 
     margin-top: 15px;
 }
+
+.main-content .top-text {
+    font-size: 20px;
+    color: #c1e8ff;
+}
