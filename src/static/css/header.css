@@ -7,12 +7,14 @@ header {
     font-size: 85px;
     padding-bottom: -15;
     height: 82px;
+
+    color: #c1e8ff;
 }
 
 .favicon {
     overflow: hidden;
 
-    
+
     width: 128px;
     height: 128px;
 }
