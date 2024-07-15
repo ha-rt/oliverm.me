@@ -20,6 +20,12 @@ body {
     font-style: normal;
 }
 
+@media only screen and (max-width: 600px) {
+      body {
+        margin: 0;
+      }
+    }
+
 a {
     text-decoration: none;
     color: #7DA0CA;
