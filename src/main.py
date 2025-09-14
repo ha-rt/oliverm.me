@@ -42,4 +42,4 @@ def current_time():
     return datetime.now(tz=ZoneInfo("America/Los_Angeles")).strftime("%H:%M")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
