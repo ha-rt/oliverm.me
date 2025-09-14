@@ -56,47 +56,18 @@
         </div>
 
         <div class="main-content">
-            i'm a backend developer and highschool student in british columbia.
-            <br>
-            i like coding, playing 
-            <span class="tip-container">
-                <a class="highlighted" href="https://steamcommunity.com/id/anythingoliver/">video games</a>
-                <div class="tool-tip">GTA 5, Ready or Not, Counter Strike 2, and more!</div>
-            </span>, playing guitar, writing stories, and more!
-            <br><br>
-            i'm available from 10 AM to 10 PM 
-            <span class="tip-container">
-                <span class="highlighted">PDT</span>
-                <div class="tool-tip">
-                    It is currently 
-                    <span hx-get="/api/time" hx-trigger="load, every 10s" hx-swap="innerHTML">loading</span>
-                    my time
-                </div>
-            </span> through email or twitter
             <br><br>
             <ul class="website-nav">
                 <li class="nav-link">        
                     <a class="nav-link-button" 
-                       hx-get="/projects"
+                       hx-get="/"
                        hx-target="#content" 
                        hx-trigger="click" 
                        hx-swap="outerHTML"
                        hx-push-url="true"
                        hx-on-before-request="document.querySelector('#content').classList.add('fade-out')"
                        hx-on-after-swap="document.querySelector('#content').classList.remove('fade-out')">
-                        projects
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a class="nav-link-button" 
-                       hx-get="/blog" 
-                       hx-target="#content" 
-                       hx-trigger="click" 
-                       hx-swap="outerHTML"
-                       hx-push-url="true"
-                       hx-on-before-request="document.querySelector('#content').classList.add('fade-out')"
-                       hx-on-after-swap="document.querySelector('#content').classList.remove('fade-out')">
-                        blog
+                        go back
                     </a>
                 </li>
             </ul>

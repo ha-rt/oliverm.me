@@ -4,10 +4,9 @@
     cursor: pointer;
 }
 
-/* Tooltip text */
 .tool-tip {
     position: absolute;
-    bottom: 125%; /* slightly above the text */
+    bottom: 125%;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
     background-color: rgba(0, 0, 0, 0.85);
@@ -26,7 +25,7 @@
 .tool-tip::after {
     content: "";
     position: absolute;
-    top: 100%; /* bottom of the tooltip */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     border-width: 5px;
@@ -37,5 +36,5 @@
 /* Show tooltip on hover */
 .tip-container:hover .tool-tip {
     opacity: 1;
-    transform: translateX(-50%) translateY(0); /* slide up effect */
+    transform: translateX(-50%) translateY(0);
 }

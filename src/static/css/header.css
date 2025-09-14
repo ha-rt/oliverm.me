@@ -1,8 +1,9 @@
 #header {
+    font-family: "Domine", serif;
     flex-direction: column;
     align-items: center;
     text-align: center; 
-    color: #7DA0CA;
+    color: #ffffff;
 }
 
 /* Information */
@@ -20,19 +21,23 @@
 }
 
 #header .info a {
-    color: white;
+    font-family: "Domine", serif;
     text-decoration: none;
     position: relative;
     display: inline-block;
     transition: all 0.3s ease;
 }
 
+.profile-status {
+    color: #999;
+}
+
 #header .info .github-logo {
     position: absolute;
     top: 50%;
     left: 50%;
-     transform: translate(-58%, -50%); /* I don't fully understand why the -50% doesnt work but -58 looks close enough */
-    color: #7DA0CA;
+    transform: translate(-58%, -50%); /* I don't fully understand why the -50% doesnt work but -58 looks close enough */
+    color: #ffffff;
     opacity: 0;
     font-size: 35px;
     transition: all 0.3s ease;
@@ -75,18 +80,29 @@
 
 #header .profile-info .profile-links {
     display: flex;
+    transition: all 0.3s ease;
     list-style: none;
 }
 
 #header .profile-info .profile-link {
+    transition: all 0.3s ease;
     display: inline-block;
-    color: #7DA0CA;
+    color: #999;
     padding-right: 5px;
     font-size: 20px;
 }
 
+.profile-link i {
+    color: #999;
+    transition: color 0.3s ease; 
+    font-size: 20px;
+}
 
-@media (max-width: 440px) {
+.profile-link:hover i {
+    color: #7DA0CA;
+}
+
+@media (max-width: 475px) {
     #header .info a {
         display: none
     }
@@ -96,7 +112,6 @@
         display: none;
     }
 
-    /* Make links bigger */
     #header .profile-info .profile-link {
         font-size: 25px;
     }
