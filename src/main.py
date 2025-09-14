@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from utils.github import get_user_data, get_status
+from src.utils.github import get_user_data, get_status
 from dotenv import load_dotenv
 from datetime import datetime
 from zoneinfo import ZoneInfo
