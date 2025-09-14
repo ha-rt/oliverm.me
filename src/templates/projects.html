@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- METADATA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CUSTOMIZATION -->
+    <title>Oliver's Website</title>
+    <link rel="shortcut icon" href="{{ avatar_url }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="static/css/root.css">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/tooltip.css">
+
+    <!-- IMPORTS -->
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"></script>
+    <script src="https://kit.fontawesome.com/31135deaea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <div class="info">
+                <a href="https://github.com/{{ username }}">
+                    <img src="{{ avatar_url }}" alt="{{ username }}'s avatar">
+                    <i class="fa-brands fa-github github-logo"></i>
+                </a>
+                <h1>oliver m. (ha-rt)</h1>
+            </div>
+
+            <div class="profile-info">
+                <span class="tip-container">
+                    <span class="profile-status">{{ status }}</span>
+                    <div class="tool-tip">This is currently my status on github</div>
+                </span>
+                <span class="divider"> | </span>
+                <ul class="profile-links">
+                    <li class="profile-link-item">
+                        <a href="https://github.com/{{ username }}" class="profile-link">
+                            <i class="fa-brands fa-github-alt"></i>
+                        </a>
+                    </li>
+                    <li class="profile-link-item">
+                        <a href="https://x.com/olivers0nline" class="profile-link">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="profile-link-item">
+                        <a href="mailto:contact@oliverm.me" class="profile-link">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <br><br>
+            <ul class="website-nav">
+                <li class="nav-link">        
+                    <a class="nav-link-button" 
+                       hx-get="/"
+                       hx-target="#content" 
+                       hx-trigger="click" 
+                       hx-swap="outerHTML"
+                       hx-push-url="true"
+                       hx-on-before-request="document.querySelector('#content').classList.add('fade-out')"
+                       hx-on-after-swap="document.querySelector('#content').classList.remove('fade-out')">
+                        go back
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            &#169; Oliver M. 2025 | 
+            <a href="https://github.com/ha-rt/oliverm.me/blob/main/LICENSE" class="highlighted">MIT License</a>
+        </footer>
+    </div>
+</body>
+</html>

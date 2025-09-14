@@ -1,0 +1,33 @@
+ <div id="content">
+        <div id="header">
+            <div class="info">
+                <a href="https://github.com/{{ username }}">
+                    <img src="{{ avatar_url }}" alt="{{ username }}'s avatar">
+                    <i class="fa-brands fa-github github-logo"></i>
+                </a>
+                <h1>my projects</h1>
+            </div>
+
+        <div class="main-content">
+            <br><br>
+            <ul class="website-nav">
+                <li class="nav-link">        
+                    <a class="nav-link-button" 
+                       hx-get="/"
+                       hx-target="#content" 
+                       hx-trigger="click" 
+                       hx-swap="outerHTML"
+                       hx-push-url="true"
+                       hx-on-before-request="document.querySelector('#content').classList.add('fade-out')"
+                       hx-on-after-swap="document.querySelector('#content').classList.remove('fade-out')">
+                        go back
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            &#169; Oliver M. 2025 | 
+            <a href="https://github.com/ha-rt/oliverm.me/blob/main/LICENSE" class="highlighted">MIT License</a>
+        </footer>
+    </div>

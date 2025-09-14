@@ -1,0 +1,40 @@
+.tip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tool-tip {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+/* Tooltip arrow */
+.tool-tip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tip-container:hover .tool-tip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
