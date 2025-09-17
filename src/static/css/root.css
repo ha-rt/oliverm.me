@@ -76,19 +76,96 @@ footer {
     margin: 0;
 }
 
-.website-nav .nav-link {
-    display: block;
-    color: rgb(1, 0, 3);
+.website-nav .nav-link-button {
+    display: inline-block;
+    padding: 8px 18px;
     margin: 5px;
-    padding: 2px 10px 2px 10px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: #555;
-    border-width: 1px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
     text-decoration: none;
-    background-color: white;
+    color: #ffffff;
+    background: linear-gradient(135deg, #7DA0CA, #4b6a94);
+    border: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
 }
 
-.website-nav .nav-link :hover {
-    cursor: pointer;
+.website-nav .nav-link-button:hover {
+    background: linear-gradient(135deg, #a9c6eb, #7DA0CA);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.website-nav .nav-link-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.repo-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.repo-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.repo-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.repo-item h3 {
+    font-family: "Domine", serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.repo-item h3 a {
+    text-decoration: none;
+    color: #7DA0CA;
+    transition: color 0.3s ease;
+}
+
+.repo-item h3 a:hover {
+    color: #a9c6eb;
+}
+
+.repo-item p {
+    font-family: "Saira", sans-serif;
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+.main-content > p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .repo-item {
+        padding: 12px 15px;
+    }
+
+    .repo-item h3 {
+        font-size: 18px;
+    }
+
+    .repo-item p {
+        font-size: 14px;
+    }
 }
