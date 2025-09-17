@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from src.utils.github import get_user_data, get_status
+from src.utils.github import get_user_data, get_status, get_user_repos
 from dotenv import load_dotenv
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -26,7 +26,8 @@ def projects():
             "components/projects.html", 
             avatar_url=get_user_data(GITHUB_USERNAME or "ha-rt")["avatar_url"],
             username=GITHUB_USERNAME or "ha-rt",
-            status=get_status(GITHUB_USERNAME or "ha-rt")
+            status=get_status(GITHUB_USERNAME or "ha-rt"),
+            repos=get_user_repos(GITHUB_USERNAME or "ha-rt")
         )
     else:
         return render_template(
@@ -34,7 +35,8 @@ def projects():
                 page="projects",
                 avatar_url=get_user_data(GITHUB_USERNAME or "ha-rt")["avatar_url"],
                 username=GITHUB_USERNAME or "ha-rt",
-                status=get_status(GITHUB_USERNAME or "ha-rt")
+                status=get_status(GITHUB_USERNAME or "ha-rt"),
+                repos=get_user_repos(GITHUB_USERNAME or "ha-rt")
             ) 
 
 @app.route("/api/time")

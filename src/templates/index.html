@@ -77,26 +77,19 @@
             <ul class="website-nav">
                 <li class="nav-link">        
                     <a class="nav-link-button" 
-                       hx-get="/projects"
-                       hx-target="#content" 
-                       hx-trigger="click" 
-                       hx-swap="outerHTML"
-                       hx-push-url="true"
-                       hx-on-before-request="document.querySelector('#content').classList.add('fade-out')"
-                       hx-on-after-swap="document.querySelector('#content').classList.remove('fade-out')">
+                    hx-get="/projects"
+                    hx-target="#content" 
+                    hx-trigger="click" 
+                    hx-swap="outerHTML"
+                    hx-push-url="true"
+                    hx-on::before-request="document.querySelector('#content').classList.add('fade-out')"
+                    hx-on::after-swap="document.querySelector('#content').classList.remove('fade-out')">
                         projects
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a class="nav-link-button" 
-                       hx-get="/blog" 
-                       hx-target="#content" 
-                       hx-trigger="click" 
-                       hx-swap="outerHTML"
-                       hx-push-url="true"
-                       hx-on-before-request="document.querySelector('#content').classList.add('fade-out')"
-                       hx-on-after-swap="document.querySelector('#content').classList.remove('fade-out')">
-                        blog
+                    <a class="nav-link-button">
+                        blog (coming soon)
                     </a>
                 </li>
             </ul>
